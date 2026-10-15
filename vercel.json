@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/cardapio-pizzas-e-esfihas.html", "destination": "/#cardapio-completo", "permanent": true }
+  ]
+}

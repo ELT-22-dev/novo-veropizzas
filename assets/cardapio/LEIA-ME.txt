@@ -1,0 +1,27 @@
+FOTOS DO CARDÁPIO
+=================
+Salve a foto nesta pasta com exatamente o nome abaixo (.webp) e rode:
+    python _ferramentas/gerar_cardapio.py
+Fotos "cat-*.webp" valem para a categoria inteira (usadas quando o sabor não tem foto própria).
+Pizzas salgadas, pizzas doces e esfihas não têm foto (lista simples).
+
+promo-promocao-1.webp                         usando foto da categoria
+promo-promocao-2.webp                         usando foto da categoria
+promo-promocao-3.webp                         usando foto da categoria
+promo-promocao-4.webp                         usando foto da categoria
+beirute-bauru.webp                            usando foto da categoria
+beirute-calabresa.webp                        usando foto da categoria
+beirute-frango.webp                           usando foto da categoria
+beirute-lombo.webp                            usando foto da categoria
+calzone-mussarela.webp                        usando foto da categoria
+calzone-calabresa-com-bacon-e-mussarela.webp  usando foto da categoria
+calzone-quatro-queijos.webp                   usando foto da categoria
+calzone-atum-e-cebola.webp                    usando foto da categoria
+calzone-atum-com-mussarela.webp               usando foto da categoria
+calzone-calzone-a-sua-escolha.webp            usando foto da categoria
+batata-tradicional-vero.webp                  foto própria
+batata-suprema-vero.webp                      foto própria
+batata-explosao-de-fritas-vero.webp           foto própria
+bebida-cerveja.webp                           foto própria
+bebida-refrigerante-2-litros.webp             foto própria
+bebida-refrigerante-lata.webp                 foto própria
