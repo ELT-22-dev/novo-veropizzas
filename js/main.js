@@ -61,6 +61,9 @@
     document.querySelectorAll('[data-open-tab]').forEach(function (a) {
       a.addEventListener('click', function () { openTab(a.dataset.openTab); });
     });
+    // links antigos (ex.: /batata.html -> /?aba=batatas#cardapio-completo) abrem a aba certa
+    var aba = new URLSearchParams(location.search).get('aba');
+    if (aba && document.getElementById('t-' + aba)) openTab(aba);
   }
 
   document.getElementById('ano').textContent = new Date().getFullYear();

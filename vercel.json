@@ -1,5 +1,32 @@
 {
   "redirects": [
-    { "source": "/cardapio-pizzas-e-esfihas.html", "destination": "/#cardapio-completo", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/cardapio-pizzas-e-esfihas.html", "destination": "/?aba=pizzas#cardapio-completo", "permanent": true },
+    { "source": "/batata.html", "destination": "/?aba=batatas#cardapio-completo", "permanent": true },
+    { "source": "/images/favicon.svg", "destination": "/favicon.svg", "permanent": true },
+    { "source": "/images/favicon-32x32.png", "destination": "/favicon-32x32.png", "permanent": true },
+    { "source": "/images/favicon-16x16.png", "destination": "/favicon-16x16.png", "permanent": true },
+    { "source": "/images/apple-touch-icon.png", "destination": "/apple-touch-icon.png", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    },
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }]
+    }
   ]
 }
