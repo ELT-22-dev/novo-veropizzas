@@ -4,3 +4,6 @@ SKILLS-SITE-LP.md
 _tab_test.html
 .vercel
 __pycache__/
+
+.vercel
+.env*

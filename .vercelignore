@@ -1,3 +1,5 @@
 _ferramentas/
 SKILLS-SITE-LP.md
 images/
+.env*
+.vercel
