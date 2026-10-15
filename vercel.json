@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.veropizzas.com.br" }], "destination": "https://veropizzas.com.br/:path*", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/cardapio-pizzas-e-esfihas.html", "destination": "/?aba=pizzas#cardapio-completo", "permanent": true },
     { "source": "/batata.html", "destination": "/?aba=batatas#cardapio-completo", "permanent": true },
