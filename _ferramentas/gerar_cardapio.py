@@ -97,6 +97,7 @@ BEIRUTES = [
 CALZONES = [('Mussarela',45),('Calabresa com Bacon e Mussarela',51),('Quatro Queijos',54),
  ('Atum e Cebola',46),('Atum com Mussarela',51),('Calzone à sua Escolha',60)]
 PASTEIS = [('Carne',10),('Queijo',10),('Catufrango',10)]
+LANCHES = [('X Bauru',15),('X Salada',17),('X Bacon',17),('X GG',18),('X Maionese',15)]
 # tamanho, nome, preço, acompanhamentos, destaque
 BATATAS = [
  ('P', 'Tradicional Vero', 15, ['Ketchup', 'Mostarda', 'Maionese', 'Queijo ralado', 'Cheddar ou Catupiry', 'Bacon ou Calabresa'], ''),
@@ -182,6 +183,8 @@ panel('calzones', 'Calzones',
 panel('pasteis', 'Pastéis',
   ul(item('pastel', n, '', buy('', p, f'Olá! Quero pedir um pastel de {n} - {brl(p)}.'), photo=False) for n, p in PASTEIS),
   '<b>Novidade!</b> Que tal um pastel frito na hora? Para começar: carne, queijo e catufrango')
+panel('lanches', 'Lanches',
+  ul(item('lanche', n, '', buy('', p, f'Olá! Quero pedir um {n} - {brl(p)}.'), fb='lanche') for n, p in LANCHES))
 
 bat = []
 for tam, nome, preco, acomp, tag in BATATAS:

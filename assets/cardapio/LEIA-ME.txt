@@ -19,6 +19,11 @@ calzone-quatro-queijos.webp                   usando foto da categoria
 calzone-atum-e-cebola.webp                    usando foto da categoria
 calzone-atum-com-mussarela.webp               usando foto da categoria
 calzone-calzone-a-sua-escolha.webp            usando foto da categoria
+lanche-x-bauru.webp                           usando foto da categoria
+lanche-x-salada.webp                          usando foto da categoria
+lanche-x-bacon.webp                           usando foto da categoria
+lanche-x-gg.webp                              usando foto da categoria
+lanche-x-maionese.webp                        usando foto da categoria
 batata-tradicional-vero.webp                  foto própria
 batata-suprema-vero.webp                      foto própria
 batata-explosao-de-fritas-vero.webp           foto própria
