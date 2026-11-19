@@ -66,5 +66,31 @@
     if (aba && document.getElementById('t-' + aba)) openTab(aba);
   }
 
+  // listas longas do cardápio: mostra só os primeiros itens + botão "Ver todos"
+  // (sem JS, a lista aparece inteira)
+  document.querySelectorAll('.menu-list').forEach(function (list) {
+    var total = list.children.length;
+    if (total <= 10) return;
+    list.classList.add('is-collapsed');
+    var wrap = document.createElement('div');
+    wrap.className = 'menu-more';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn--gold';
+    btn.setAttribute('aria-expanded', 'false');
+    var label = document.createElement('span');
+    label.textContent = 'Ver todos os ' + total + ' itens';
+    btn.appendChild(label);
+    btn.insertAdjacentHTML('beforeend', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>');
+    btn.addEventListener('click', function () {
+      var open = list.classList.toggle('is-collapsed') === false;
+      btn.setAttribute('aria-expanded', String(open));
+      label.textContent = open ? 'Mostrar menos' : 'Ver todos os ' + total + ' itens';
+      if (!open) list.scrollIntoView({ block: 'start' });
+    });
+    wrap.appendChild(btn);
+    list.parentNode.insertBefore(wrap, list.nextSibling);
+  });
+
   document.getElementById('ano').textContent = new Date().getFullYear();
 })();
