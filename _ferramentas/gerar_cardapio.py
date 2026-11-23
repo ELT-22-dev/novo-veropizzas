@@ -97,7 +97,14 @@ BEIRUTES = [
 CALZONES = [('Mussarela',45),('Calabresa com Bacon e Mussarela',51),('Quatro Queijos',54),
  ('Atum e Cebola',46),('Atum com Mussarela',51),('Calzone à sua Escolha',60)]
 PASTEIS = [('Carne',10),('Queijo',10),('Catufrango',10)]
-LANCHES = [('X Bauru',15),('X Salada',17),('X Bacon',17),('X GG',18),('X Maionese',15)]
+# nome, descrição, preço
+LANCHES = [
+ ('X Bauru', 'Hambúrguer 90 gramas, presunto, mussarela, tomate e maionese', 15),
+ ('X Salada', 'Hambúrguer 90 gramas, maionese, mussarela, alface e tomate', 17),
+ ('X Bacon', 'Hambúrguer 90 gramas, bacon, mussarela e maionese', 17),
+ ('X Egg', 'Hambúrguer 90 gramas, ovo, maionese e mussarela', 18),
+ ('X Maionese', 'Hambúrguer 90 gramas, maionese e mussarela', 15),
+]
 # tamanho, nome, preço, acompanhamentos, destaque
 BATATAS = [
  ('P', 'Tradicional Vero', 15, ['Ketchup', 'Mostarda', 'Maionese', 'Queijo ralado', 'Cheddar ou Catupiry', 'Bacon ou Calabresa'], ''),
@@ -184,7 +191,7 @@ panel('pasteis', 'Pastéis',
   ul(item('pastel', n, '', buy('', p, f'Olá! Quero pedir um pastel de {n} - {brl(p)}.'), photo=False) for n, p in PASTEIS),
   '<b>Novidade!</b> Que tal um pastel frito na hora? Para começar: carne, queijo e catufrango')
 panel('lanches', 'Lanches',
-  ul(item('lanche', n, '', buy('', p, f'Olá! Quero pedir um {n} - {brl(p)}.'), fb='lanche') for n, p in LANCHES))
+  ul(item('lanche', n, d, buy('', p, f'Olá! Quero pedir um {n} - {brl(p)}.'), fb='lanche') for n, d, p in LANCHES))
 
 bat = []
 for tam, nome, preco, acomp, tag in BATATAS:
